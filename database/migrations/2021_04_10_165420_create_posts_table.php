@@ -15,7 +15,18 @@ class CreatePostsTable extends Migration
     {
         Schema::create('posts', function (Blueprint $table) {
             $table->id();
+            $table->string('image');
+            $table->string('title');
+            $table->string('slug');
+            $table->bigInteger('category_id')->unsigned();
+            $table->text('content');
             $table->timestamps();
+        });
+
+        //create privot table post_tag
+        Schema::create('post_tag', function (Blueprint $table) {
+            $table->integer('post_id');
+            $table->integer('tag_id');
         });
     }
 
