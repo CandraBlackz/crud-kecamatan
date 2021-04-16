@@ -3,7 +3,7 @@
     <meta charset="UTF-8">
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no" name="viewport">
     <meta name="csrf-token" content="{{ csrf_token() }}">
-    <title>Dashboard &mdash; Kecamatan Lolak</title>
+    <title>Dashboard Kecamatan Lolak</title>
     <link rel="shortcut icon" href="{{ asset('assets/img/school.svg') }}" type="image/x-icon">
 
     <!-- General CSS Files -->
@@ -135,7 +135,7 @@
 
                                 @can('permissions.index')
                                 <li class="{{ setActive('admin/permission') }}">
-                                    <a class="nav-link" href="#">
+                                    <a class="nav-link" href="{{ route('admin.permission.index') }}">
                                         <i class="fas fa-key"></i>
                                         Permissions</a></li>
                                 @endcan
