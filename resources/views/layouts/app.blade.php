@@ -3,7 +3,7 @@
     <meta charset="UTF-8">
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no" name="viewport">
     <meta name="csrf-token" content="{{ csrf_token() }}">
-    <title>Dashboard Kecamatan Lolak</title>
+    <title>Dashboard CMS Kecamatan</title>
     <link rel="shortcut icon" href="{{ asset('assets/img/school.svg') }}" type="image/x-icon">
 
     <!-- General CSS Files -->
@@ -57,7 +57,7 @@
             <div class="main-sidebar sidebar-style-2">
                 <aside id="sidebar-wrapper">
                     <div class="sidebar-brand">
-                        <a href="index.html">KECAMATAN LOLAK</a>
+                        <a href="index.html">ADMIN KECAMATAN</a>
                     </div>
                     <div class="sidebar-brand sidebar-brand-sm">
                         <a href="index.html">KECAMATAN</a>
@@ -98,6 +98,13 @@
                         @if(auth()->user()->can('photos.index') || auth()->user()->can('videos.index'))
                         <li class="menu-header">GALERI</li>
                         @endif
+
+                        @can('photos.index')
+                        <li class="{{ setActive('admin/photo') }}">
+                            <a class="nav-link" href="#">
+                                <i class="fas fa-image"></i>
+                                <span>Foto</span></a></li>
+                        @endcan
 
                         @can('videos.index')
                         <li class="{{ setActive('admin/video') }}">
@@ -158,7 +165,7 @@
 
             <footer class="main-footer">
                 <div class="footer-left">
-                    Copyright &copy; 2020 <div class="bullet"></div> KECAMATAN LOLAK <div class="bullet"></div> All Rights Reserved.
+                    Copyright &copy; 2021 <div class="bullet"></div> Pemerintah Kabupaten Bolaang Mongondow <div class="bullet"></div> Dikembangkan oleh e-Gov Diskominfo Bolmong.
                 </div>
                 <div class="footer-right">
 

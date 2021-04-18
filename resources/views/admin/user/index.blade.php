@@ -53,7 +53,7 @@
                                         @endif
                                     </td>
                                     <td class="text-center">
-                                        @can('user.edit')
+                                        @can('users.edit')
                                             <a href="{{ route('admin.user.edit', $user->id) }}" class="btn btn-sm btn-primary">
                                                 <i class="fa fa-pencil-alt"></i>
                                             </a>
