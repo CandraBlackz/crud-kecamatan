@@ -11,7 +11,7 @@
 
             <div class="card">
                 <div class="card-header">
-                    <h4><i class="fas fa-folder"></i> Kategori<h4>
+                    <h4><i class="fas fa-folder"></i> Kategori</h4>
                 </div>
 
                 <div class="card-body">
@@ -39,11 +39,11 @@
                                     <th scope="col">NAMA KATEGORI</th>
                                     <th scope="col" style="width: 15%;text-align: center">AKSI</th>
                                 </tr>
-                            </thead>
-                            <tbody>
+                                </thead>
+                                <tbody>
                                 @foreach ($categories as $no => $category)
-                                <tr>
-                                    <th scope="row" style="text-align: center">{{ ++$no + ($categories->currentPage()-1) * $categories-perPage() }}</th>
+                                    <tr>
+                                        <th scope="row" style="text-align: center">{{ ++$no + ($categories->currentPage()-1) * $categories->perPage() }}</th>
                                     <td>{{ $category->name }}</td>
                                     <td class="text-center">
                                         @can('categories.edit')
