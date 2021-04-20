@@ -104,7 +104,7 @@ class CategoryController extends Controller
             return redirect()->route('admin.category.index')->with(['success' => 'Data Berhasil Diupdate!']);
         }else{
             //redirect dengan pesan error
-            return redirect()->('admin.category.index')->with(['error' => 'Data Gagal Diupdate!']);
+            return redirect()->route('admin.category.index')->with(['error' => 'Data Gagal Diupdate!']);
         }
     }
 
