@@ -68,9 +68,10 @@
                             <a class="nav-link" href="{{ route('admin.dashboard.index') }}">
                                 <i class="fas fa-tachometer-alt"></i>
                                 <span>Dashboard</span></a></li>
-                        @can('post.index')
+
+                        @can('posts.index')
                         <li class="{{ setActive('admin/post') }}">
-                            <a class="nav-link" href="#">
+                            <a class="nav-link" href="{{ route('admin.post.index') }}">
                                 <i class="fas fa-book-open"></i>
                                 <span>Berita</span></a></li>
                         @endcan
