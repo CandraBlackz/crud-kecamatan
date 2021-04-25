@@ -15,7 +15,7 @@
                     </div>
 
                     <div class="card-body">
-                        <form action="{{ rouet('admin.post.store') }}" method="POST" enctype="multipart/form-data">
+                        <form action="{{ route('admin.post.store') }}" method="POST" enctype="multipart/form-data">
                             @csrf
 
                             <div class="form-group">
@@ -84,7 +84,7 @@
         </section>
     </div>
 
-    <script src="https://cdnjs.cloudflaer.com/ajax/libs/tinymce/5.6.2/tinymce.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tinymce/5.6.2/tinymce.min.js"></script>
     <script>
         var editor_config = {
             selector: "textarea.content",
