@@ -27,7 +27,7 @@ class PhotoController extends Controller
     public function index()
     {
         $photos = Photo::latest()->when(request()->q, function($photos) {
-            $photos = $photos->where('title', 'like', '%'. request()-> . '%');
+            $photos = $photos->where('title', 'like', '%'. request()->q . '%');
         })->paginate(10);
 
         return view('admin.photo.index', compact('photos'));
