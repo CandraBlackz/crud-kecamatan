@@ -96,24 +96,24 @@ class EventController extends Controller
     public function update(Request $request, Event $event)
     {
         $this->validate($request, [
-            'title' => 'required',
-            'content' => 'required',
-            'location' => 'required',
-            'date' => 'required'
+    'title'     => 'required',
+            'content'   => 'required',
+            'location'  => 'required',
+            'date'      => 'required'
         ]);
 
         $event = Event::findOrFail($event->id);
         $event->update([
-            'title' => $request->input('title'),
-            'slug' => Str::slug($request->input('title'), '-'),
-            'content' => $request->input('content');
-            'location' => $request->input('location'),
-            'date' => $request->input('date')
+            'title'     => $request->input('title'),
+            'slug'      => Str::slug($request->input('title'), '-'),
+            'content'   => $request->input('content'),
+            'location'  => $request->input('location'),
+            'date'      => $request->input('date')
         ]);
 
         if($event){
             //redirect dengan pesan sukses
-            return redirect()->route('admin.event.index')->with(['success' => 'Data Berhasil Diupdate']);
+            return redirect()->route('admin.event.index')->with(['success' => 'Data Berhasil Diupdate!']);
         }else{
             //redirect dengan pesan error
             return redirect()->route('admin.event.index')->with(['error' => 'Data Gagal Diupdate!']);
