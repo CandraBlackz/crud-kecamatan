@@ -6,7 +6,7 @@
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no" name="viewport">
     <title>Login Kecamatan</title>
 
-    <link rel="shorcut icon" href="{{ asset('assets/img/school.svg') }}" type="image/x-icon">
+    <link rel="shorcut icon" href="{{ asset('assets/img/bolmong.svg') }}" type="image/x-icon">
 
 
     <!-- General CSS Files -->
@@ -37,11 +37,15 @@
                             </div>
 
                             <div class="card-body">
-                                <form method="POST" action="{{ route('login') }}" class="needs-validation" novalidate="">
+                                <form method="POST" action="{{ route('login') }}" class="needs-validation"
+                                    novalidate="">
                                     @csrf
                                     <div class="form-group">
                                         <label for="email">Email</label>
-                                        <input id="email" type="email" class="form-control @error('email') is-invalid @enderror"name="email" placeholder="Masukkan Alamat Email" value="{{ old('email') }}" tabindex="1" required autofocus>
+                                        <input id="email" type="email"
+                                            class="form-control @error('email') is-invalid @enderror" name="email"
+                                            placeholder="Masukkan Alamat Email" value="{{ old('email') }}" tabindex="1"
+                                            required autofocus>
                                         @error('email')
                                         <span class="invalid-feedback" role="alert">
                                             <strong>{{ $message }}</strong>
@@ -51,9 +55,11 @@
 
                                     <div class="form-group">
                                         <div class="d-block">
-                                            <label for="password" class="control-label @error('passowrd') is-invalid @enderror">Password</label>
+                                            <label for="password"
+                                                class="control-label @error('password') is-invalid @enderror">Password</label>
                                         </div>
-                                        <input id="password" type="psasword" class="form-control" name="password" placeholder="Masukkan Password" tabindex="2" required>
+                                        <input id="password" type="password" class="form-control" name="password"
+                                            placeholder="Masukkan Password" tabindex="2" required>
                                         @error('password')
                                         <span class="invalid-feedback" role="alert">
                                             <strong>{{ $message }}</strong>
