@@ -41,12 +41,12 @@ class PhotoController extends Controller
      */
     public function store(Request $request)
     {
-        $this-validate($request, [
+        $this->validate($request, [
             'image' => 'required|image',
             'caption' => 'required'
         ]);
 
-        //upload imaeg
+        //upload image
         $image = $request->file('image');
         $image->storeAs('public/photos', $image->hashName());
 
