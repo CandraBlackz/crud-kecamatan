@@ -60,7 +60,7 @@
                         <a href="index.html">ADMIN</a>
                     </div>
                     <div class="sidebar-brand sidebar-brand-sm">
-                        <a href="index.html">KECAMATAN</a>
+                        <a href="index.html">ADMIN</a>
                     </div>
                     <ul class="sidebar-menu">
                         <li class="menu-header">MAIN MENU</li>
