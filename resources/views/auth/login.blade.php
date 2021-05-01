@@ -6,7 +6,7 @@
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no" name="viewport">
     <title>Login Kecamatan</title>
 
-    <link rel="shorcut icon" href="{{ asset('assets/img/bolmong.svg') }}" type="image/x-icon">
+    <link rel="shorcut icon" href="{{ asset('assets/img/logo-bolmongkab.svg') }}" type="image/x-icon">
 
 
     <!-- General CSS Files -->
@@ -28,7 +28,7 @@
                 <div class="row">
                     <div class="col-12 col-sm-8 offset-sm-2 col-md-6 offset-md-3 col-lg-6 offset-lg-3 col-xl-4 offset-xl-4">
                         <div class="login-brand">
-                            <img src="{{ asset('assets/img/school.svg') }}" alt="logo" width="100" class="shadow-light rounded-circle" style="padding:10px;background: white;">
+                            <img src="{{ asset('assets/img/logo-bolmongkab.svg') }}" alt="logo" width="100" class="shadow-light" style="padding:10px;background: white;">
                         </div>
 
                         <div class="card card-primary">

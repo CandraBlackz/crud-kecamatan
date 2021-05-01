@@ -4,7 +4,7 @@
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no" name="viewport">
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <title>Dashboard CMS Kecamatan</title>
-    <link rel="shortcut icon" href="{{ asset('assets/img/school.svg') }}" type="image/x-icon">
+    <link rel="shortcut icon" href="{{ asset('assets/img/logo-bolmongkab.svg') }}" type="image/x-icon">
 
     <!-- General CSS Files -->
     <link rel="stylesheet" href="{{ asset('assets/modules/bootstrap/css/bootstrap.min.css') }}">
@@ -57,7 +57,7 @@
             <div class="main-sidebar sidebar-style-2">
                 <aside id="sidebar-wrapper">
                     <div class="sidebar-brand">
-                        <a href="index.html">ADMIN KECAMATAN</a>
+                        <a href="index.html">ADMIN</a>
                     </div>
                     <div class="sidebar-brand sidebar-brand-sm">
                         <a href="index.html">KECAMATAN</a>
